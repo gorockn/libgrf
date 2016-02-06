@@ -6,5 +6,6 @@ includedir=${prefix}/include/libgrf
 Name: libgrf
 Description: A library for reading and writing GRF archives.
 Version: @LIBGRF_VERSION@
-Cflags: -I${includedir}
+Requires: zlib
 Libs: -L${libdir} -lz -lgrf -DGRF_STATIC -DSPR_STATIC
+Cflags: -I${includedir}
