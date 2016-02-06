@@ -7,5 +7,5 @@ Name: libgrf
 Description: A library for reading and writing GRF archives.
 Version: @LIBGRF_VERSION@
 Requires: zlib
-Libs: -L${libdir} -lz -lgrf -DGRF_STATIC -DSPR_STATIC
+Libs: -L${libdir} -lgrf -DGRF_STATIC -DSPR_STATIC
 Cflags: -I${includedir}
