@@ -1,11 +1,12 @@
 prefix=@CMAKE_INSTALL_PREFIX@
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include/libgrf
+libdir=${exec_prefix}/@INSTALL_LIB_DIR@
+includedir=${prefix}/@INSTALL_INCLUDE_DIR@
 
 Name: libgrf
 Description: A library for reading and writing GRF archives.
 Version: @LIBGRF_VERSION@
 Requires: zlib
-Libs: -L${libdir} -lgrf -DGRF_STATIC -DSPR_STATIC
 Cflags: -I${includedir}
+Libs: -L${libdir} -lgrf
+Libs.private: -DGRF_STATIC -DSPR_STATIC
